@@ -4,8 +4,11 @@ import matplotlib as mpl
 from matplotlib.colors import ListedColormap, BoundaryNorm 
 import numpy as np 
 from mpl_toolkits.axes_grid1 import make_axes_locatable 
+from pathlib import Path
 
-im = Image.open("paisaje_2.tiff") 
+# Obtener ruta relativa a la imagen
+image_path = Path(__file__).parent.parent / "images" / "paisaje_2.tiff"
+im = Image.open(image_path) 
 print("Formato, tamaño, modo:", im.format, im.size, im.mode) 
 
 # ---- Extraer colores únicos de la imagen original (RGB) ---- 

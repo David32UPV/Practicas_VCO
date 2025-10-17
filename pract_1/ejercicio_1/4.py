@@ -4,9 +4,11 @@ import matplotlib as mpl
 from matplotlib.colors import ListedColormap, BoundaryNorm 
 import numpy as np 
 from mpl_toolkits.axes_grid1 import make_axes_locatable 
+from pathlib import Path
 
-# ---- Ruta de la imagen ---- 
-im = Image.open("galaxia.jpg") 
+# Obtener ruta relativa a la imagen
+image_path = Path(__file__).parent.parent / "images" / "galaxia.jpg"
+im = Image.open(image_path) 
 print("Formato, tamaño, modo:", im.format, im.size, im.mode) 
 
 # ---- Convertir la imagen a modo 'P' con paleta inicial (256 colores) ---- 
