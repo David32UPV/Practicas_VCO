@@ -1,6 +1,5 @@
 from PIL import Image 
 import matplotlib.pyplot as plt 
-import matplotlib as mpl 
 import numpy as np 
 from pathlib import Path
 
